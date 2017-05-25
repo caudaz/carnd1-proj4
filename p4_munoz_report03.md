@@ -1,6 +1,3 @@
-<span id="_Hlk480219483" class="anchor"></span>**Name: Andres Munoz
-(munoznajar@gmail.com)**
-
 **Self-Driving Car Engineer Nanodegree**
 
 **Project4: Advanced Lane Finding**
