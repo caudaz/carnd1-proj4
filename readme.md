@@ -1,15 +1,15 @@
-**Self-Driving Car Engineer Nanodegree**
+# **Self-Driving Car Engineer Nanodegree** #
 
-**Project4: Advanced Lane Finding**
+# **Project4: Advanced Lane Finding** #
 
-**INTRODUCTION**
+## **INTRODUCTION** ##
 
 **The** purpose of the project is to find the lanes that bound the path
 of a car from a video file. Various image processing techniques will be
 used. An output video containing the highlighted found lanes as well as
 their curvature will be rendered.
 
-**CAMERA CALIBRATION**
+## **CAMERA CALIBRATION** ##
 
 Multiple images of a chessboard pattern taken from different angles were
 processed the ChessboardCorners CV2 function to find corners:
@@ -22,7 +22,7 @@ After that the calibrateCamera CV2 function is used on the found corners
 “dist” coefficients that will later be applied to all images taken using
 the same camera.
 
-**THRESHOLD IMAGE**
+## **THRESHOLD IMAGE** ##
 
 To get rid of all the unnecessary detail on the photos and just focus on
 the lanes, Sobel edge detection filters (derivaties of image pixels) are
@@ -46,7 +46,7 @@ height="1.0742979002624673in"}
 ![](./myMediaFolder/media/image2.png){width="3.2319925634295714in"
 height="1.074180883639545in"}
 
-**PERSPECTIVE TRANSFORM**
+## **PERSPECTIVE TRANSFORM** ##
 
 A perspective transformed is performed on the ‘Thresholded’ images. The
 technique involves defining 4 points that lay on a plane, and defining
@@ -60,7 +60,7 @@ height="1.0743055555555556in"}
 ![](./myMediaFolder/media/image2.png){width="3.2444444444444445in"
 height="1.0743055555555556in"}
 
-**DETECTING THE LANE PIXELS**
+## **DETECTING THE LANE PIXELS** ##
 
 A 2 step approach is taken to find the lane pixels:
 
@@ -85,7 +85,7 @@ perspective transform:
   ---------------------------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------
   ![](./myMediaFolder/media/image5.jpeg){width="3.504861111111111in" height="1.9701498250218723in"}    ![](./myMediaFolder/media/image6.jpeg){width="3.6095767716535434in" height="2.033195538057743in"}
 
-**TRANSFORM BACK INTO ORIGINAL PERSPECTIVE**
+## **TRANSFORM BACK INTO ORIGINAL PERSPECTIVE** ##
 
 The found lanes are transformed back into the original perspective view
 to be overlaid with the original video images:
@@ -97,7 +97,7 @@ to be overlaid with the original video images:
 The same 4 points for the plane are used, but switched inside the
 getPerspectiveTransform CV2 function.
 
-**LANE CURVATURE AND VEHICLE POSITION**
+## **LANE CURVATURE AND VEHICLE POSITION** ##
 
 *The curvature
 R*​*curve*​​=​∣​*dy*​2​​​​*d*​2​​*x*​​∣​​\[1+(​*dy*​​*dx*​​)​2​​\]​3/2​​​​
@@ -113,7 +113,7 @@ average of the left/right lanes on the bottom row is calculated. If the
 average is greater than 665 pixels, the vehicle is to the right of the
 centerline, and if less to the left of the centerline.
 
-**VIDEO PROCESSING PIPELINE**
+## **VIDEO PROCESSING PIPELINE** ##
 
 > Convert MP4 to JPGs
 >
@@ -155,7 +155,7 @@ centerline, and if less to the left of the centerline.
 >
 > Convert JPGs to MP4
 
-**ASSUMPTIONS THAT COULD CAUSE THE MODEL TO FAIL**
+## **ASSUMPTIONS THAT COULD CAUSE THE MODEL TO FAIL** ##
 
 -going on a road that is not planar. For example, a steep hill. The
 perspective projection would not work correctly.
